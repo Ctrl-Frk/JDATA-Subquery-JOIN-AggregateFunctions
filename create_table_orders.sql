@@ -7,6 +7,11 @@ CREATE TABLE orders
     amount       int     NOT NULL
 );
 
+ALTER TABLE orders
+    ADD CONSTRAINT fk_orders_customers
+        FOREIGN KEY (customer_id)
+            REFERENCES customers (id);
+
 SELECT *
 FROM orders;
 

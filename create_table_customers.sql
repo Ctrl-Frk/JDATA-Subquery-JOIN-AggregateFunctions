@@ -7,12 +7,6 @@ CREATE TABLE customers
     phone_number varchar(12) NOT NULL
 );
 
-ALTER TABLE customers
-    ADD CONSTRAINT fk_customers_orders
-        FOREIGN KEY (id)
-            REFERENCES orders (customer_id);
-
 SELECT *
 FROM customers;
 
-DROP TABLE orders;
